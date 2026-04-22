@@ -1,0 +1,19 @@
+name: Ligando Python
+on:
+  push:
+  pull_request:
+
+jobs:
+  Python:
+    runs-on: ununtu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v6.2.0
+
+      - name: obter o codigo (checkout)
+        uses: actions/setup-checkout@v4
+
+      - name: Executar o Programa
+        run: |
+            pwd
+            python app.py
